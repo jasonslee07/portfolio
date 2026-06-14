@@ -1,4 +1,4 @@
-export const RESUME_PATH = "/Jason_Lee_resume.pdf"
+export const RESUME_PATH = `${import.meta.env.BASE_URL}Jason_Lee_resume.pdf`
 
 export const profile = {
   name: "Jason Lee",
