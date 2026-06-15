@@ -20,8 +20,8 @@ export default function Projects() {
       id="projects"
       index="02"
       label="Projects"
-      title="Things I’ve shipped on my own"
-      lead="Personal and hackathon builds — open one to read the case study."
+      title="Building cool stuff over here"
+      // lead="Personal and hackathon builds — open one to read the case study."
     >
       <div className="flex flex-col">
         {projects.map((project, i) => {

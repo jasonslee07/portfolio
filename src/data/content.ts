@@ -6,7 +6,7 @@ export const profile = {
   role: "Software Engineer",
   location: "College Park, MD",
   email: "jasonlee131045@gmail.com",
-  phone: "240-302-0842",
+  phone: "(240) 302-0842",
   links: {
     github: "https://github.com/jasonslee07",
     githubLabel: "github.com/jasonslee07",
@@ -14,25 +14,15 @@ export const profile = {
     linkedinLabel: "linkedin.com/in/lee-s-jason",
   },
 
-  availability: "Open to Summer 2027 software engineering internships",
+  // can add this back if I want. Located in Hero.tsx
+  // availability: "Open to Fall 2026, Spring 2027, and Summer 2027 software engineering internships",
 }
 
 export const hero = {
-  eyebrow: "Software Engineer · CS + Math @ Maryland",
+  eyebrow: "CS + Math @ UMD · SWE @ American Operator",
   headline: "Hi, my name is Jason!",
-  subhead: "I'm a computer science student at the University of Maryland who likes to use software to make the world a better place",
-}
-
-
-export const about = {
-
-  paragraphs: [
-    "I’m a CS student at the University of Maryland (3.97 GPA, minor in math) who likes being close to the work — designing the data model, wiring the API, and sweating the last 10% that makes something feel finished.",
-    "So far that’s meant building a typed full-stack KPI dashboard and LLM agents at a startup, automating an IT service desk down from a 24-hour response to under ten seconds, and researching quantum machine learning on the side.",
-    "Outside the editor I spent a decade in Scouting (Eagle Scout, troop president) and taught kids to code — both of which taught me more about shipping under pressure than any lecture did.",
-  ],
-
-  pullQuote: "The best code I’ve written is the code someone actually used the next morning.",
+  subhead: 
+  "I'm a computer science student at the University of Maryland, and I like using my passion for coding to make the world a better place :D",
 }
 
 export type Experience = {
@@ -97,9 +87,9 @@ export const experience: Experience[] = [
   },
   {
     company: "UMD Department of Computer Science",
-    role: "Course Facilitator for the Coding Interview",
+    role: "Course Facilitator for \"The Coding Interview\"",
     location: "College Park, MD",
-    period: "Starting August 2026",
+    period: "Starting Aug 2026",
     stack: [],
     points: [],
   },

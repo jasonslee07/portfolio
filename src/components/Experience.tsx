@@ -7,9 +7,9 @@ export default function Experience() {
     <Section
       id="work"
       index="01"
-      label="Work"
-      title="Where I’ve built things"
-      lead="Internships and research, most recent first."
+      label="Experience"
+      title="Working hard or hardly working?"
+      // lead="Internships and research, most recent first."
     >
       <ol className="flex flex-col">
         {experience.map((job, i) => (

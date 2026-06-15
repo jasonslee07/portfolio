@@ -4,7 +4,12 @@ import Section from "./Section"
 
 export default function Education() {
   return (
-    <Section id="education" index="03" label="Education" title="Schooling">
+    <Section 
+      id="education"
+      index="03"
+      label="Education"
+      title="Learning cool stuff over here"
+    >
       <Reveal className="flex flex-col gap-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
@@ -20,7 +25,7 @@ export default function Education() {
               <p className="nums mt-0.5 text-lg font-semibold text-ink">{education.gpa}</p>
             </div>
             <div>
-              <p className="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-faint">Graduates</p>
+              <p className="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-faint">Expected Graduation</p>
               <p className="nums mt-0.5 text-lg font-semibold text-ink">{education.grad.replace("Expected ", "")}</p>
             </div>
           </div>

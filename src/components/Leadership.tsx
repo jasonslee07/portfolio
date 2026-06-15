@@ -7,9 +7,9 @@ export default function Leadership() {
     <Section
       id="leadership"
       index="05"
-      label="Beyond code"
-      title="Leading & teaching"
-      lead="A decade of Scouting and a habit of teaching what I learn."
+      label="Leadership"
+      title="Beyond coding"
+      // lead="A decade of Scouting and a habit of teaching what I learn."
     >
       <ol className="flex flex-col">
         {leadership.map((role, i) => (

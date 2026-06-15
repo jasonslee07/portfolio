@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { profile, RESUME_PATH } from "../data/content"
 
 const NAV = [
-  { href: "#work", label: "Work" },
+  { href: "#work", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#education", label: "Education" },
 ]
