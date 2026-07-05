@@ -17,11 +17,7 @@ export default function Hero() {
         {/* Header + summary on the left, portrait on the right (stacks on mobile) */}
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
           <div className="lg:flex-1 lg:min-w-0">
-            <Reveal className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-muted">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-              </span>
+            <Reveal className="font-mono text-xs uppercase tracking-[0.18em] text-muted">
               {hero.eyebrow}
             </Reveal>
 

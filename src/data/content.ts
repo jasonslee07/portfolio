@@ -38,15 +38,16 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "American Operator",
-    role: "Software Engineer Intern",
+    role: "AI Engineer Intern",
     location: "Austin, TX",
     period: "Jun 2026 — Present",
     current: true,
-    stack: ["TypeScript", "React", "Neon Postgres", "Drizzle ORM", "Zod", "Serverless", "LLM agents"],
+    stack: ["Claude Code", "Python", "TypeScript", "SQL", "React", "Neon Postgres", "Vercel", "BigQuery", "Inngest", "Drizzle ORM", "Zod"],
     points: [
-      "Built a modular LLM agent integrating 5+ APIs (HubSpot, calendar, web, call transcripts) to auto-generate research briefs and tear sheets.",
-      "Built a full-stack TypeScript KPI dashboard (React, serverless API, Postgres) that replaced a manual weekly spreadsheet for portfolio operations.",
-      "Wrote typed serverless APIs (Drizzle ORM, Neon Postgres, Zod) computing trailing averages, goal variance, and week-over-week change.",
+      "Deployed a full-stack TypeScript KPI dashboard (React, serverless API, Postgres) replacing a manual weekly spreadsheet for portfolio ops",
+      "Shipped Inngest pipelines syncing BigQuery metrics to a live dashboard and weekly KPI emails to leadership, replacing manual reporting",
+      "Automated accounts payable end-to-end with an AI pipeline that reads invoice PDFs, matches costs to jobs, and files Knowify bills daily",
+      "Built a modular LLM agent integrating 5+ APIs (HubSpot, calendar, web, call transcripts) to auto-generate research briefs and tear sheets"
     ],
   },
   {
@@ -54,12 +55,12 @@ export const experience: Experience[] = [
     role: "Software Engineer Intern",
     location: "McLean, VA",
     period: "Jan 2026",
-    stack: ["Copilot Studio", "Power Automate", "OAuth 2.0 (3LO)", "Jira API", "Azure Blob", "PowerShell"],
+    stack: ["Copilot Studio", "Power Automate", "OAuth 2.0 (3LO)", "Jira API", "Azure Blob"],
     points: [
-      "Designed and built an IT service-desk agent in Copilot Studio, trained on SharePoint libraries, to resolve common employee IT questions.",
-      "Created Power Automate flows and OAuth 2.0 (3LO) custom connectors to automate ticket creation against Jira’s API.",
-      "Stood up Azure Blob storage for Jira tickets and scripted PowerShell to automate uploading ticket JSON and attachments.",
-      "Reached a 27% automated resolution rate and cut average response time from 24 hours to under 10 seconds.",
+      "Designed and built an IT service desk agent in Copilot Studio, trained on SharePoint libraries, to resolve common employee IT questions",
+      "Created Power Automate flows and OAuth 2.0 (3LO) custom connectors to implement automated ticket creation to Jira’s API",
+      "Developed an Azure Blob to store Jira tickets, used PowerShell scripting to automate uploading ticket JSON contents and attachments",
+      "Achieved a 27% automated resolution rate and reduced average response time from 24 hours to under 10 seconds"
     ],
   },
   {
@@ -68,10 +69,10 @@ export const experience: Experience[] = [
     location: "College Park, MD",
     period: "Aug 2025 — Present",
     current: true,
-    stack: ["Quantum ML", "Wasserstein GANs", "FRQI", "Python", "State-vector simulation"],
+    stack: ["Python", "Wasserstein GABs", "FRQI Encoding"],
     points: [
-      "Researched quantum Wasserstein GANs for high-resolution image generation, evaluating FRQI states and task-specific inductive biases.",
-      "Used the ImageQGANS codebase to replicate published results, cross-referencing state-vector simulations against generated figures.",
+      "Researched quantum Wasserstein GANs for high-resolution image generation, evaluating FRQI states and task-specific inductive biases",
+      "Applied the ImageQGANS codebase to replicate published results, cross-referencing state vector simulations with generated figures"
     ],
   },
   {
@@ -79,12 +80,21 @@ export const experience: Experience[] = [
     role: "Computer Science Instructor",
     location: "Gaithersburg, MD",
     period: "May 2024 — Aug 2024",
-    stack: ["Python", "JavaScript", "Scratch", "Robotics"],
+    stack: ["Python", "JavaScript", "HTML", "CSS", "Robotics"],
     points: [
-      "Mentored 50+ K–8 students in Scratch, Python, JavaScript, HTML/CSS, and robotics through hands-on projects.",
-      "Taught lessons on data structures, control flow, event-driven processing, serial vs. parallel execution, and animation.",
+      "Mentored 50+ K-8 students in Scratch, Python, JavaScript, HTML, CSS, and robotics through hands-on programming projects",
+      "Presented lessons on data structures, control flow, event-driven processing, serial and parallel execution, and animation"
+
     ],
   },
+  // {
+  //   company: "Hack4Impact",
+  //   role: "Software Engineer",
+  //   location: "College Park, MD",
+  //   period: "Starting Aug 2026",
+  //   stack: [],
+  //   points: [],
+  // },
   {
     company: "UMD Department of Computer Science",
     role: "Course Facilitator for \"The Coding Interview\"",
@@ -110,6 +120,21 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Redress",
+    domain: "Agentic civic tech",
+    blurb:
+      "A full-stack app where an AI agent helps citizens file complaints and pushes government agencies to actually respond.",
+    stack: ["React", "TypeScript", "AgentMail", "Linq"],
+    caseStudy: {
+      problem:
+        "Filing a complaint with the right government office is confusing, and even when it lands, agencies stall and cases quietly die with no follow-up.",
+      approach:
+        "Built a full-stack React + TypeScript app around an AI agent that routes each case to the appropriate city office and emails the agency through AgentMail, escalating automatically when one stalls. A human approval step gates every outbound message before it sends, and Linq pushes real-time text updates to citizens on every case.",
+      result:
+        "Citizens file once and the agent handles routing, outreach, and escalation on their behalf — with a person approving anything that goes out and text updates keeping them in the loop the whole way.",
+    },
+  },
+  {
     name: "Sell4Impact",
     domain: "Real-time marketplace",
     blurb:
@@ -132,26 +157,11 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "Flask", "Roboflow", "Gemini", "ElevenLabs", "Twilio", "ngrok"],
     caseStudy: {
       problem:
-        "A naïve frame-by-frame detector fires on every twitch — far too many false alarms to ever trust with a real alert.",
+        "Open-air spots like farmers markets run on trust — stalls are unattended, crowds are dense, and a vendor busy with one customer can't watch someone pocket goods at the next table over.",
       approach:
-        "Paired a Roboflow vision model with a sliding-window heuristic over consecutive frames so a flag only holds when behavior persists. When it does, a synchronized pipeline — Gemini for a description, ElevenLabs for voice, Twilio for the call, glued together through ngrok — places an automated, descriptive emergency phone call.",
+        "Built a real-time detection app with React (TypeScript), Flask, and a Roboflow vision model to analyze the video feed and flag suspicious behavior. A sliding-window heuristic over consecutive frames holds a flag only when behavior persists, cutting the false positives a naïve frame-by-frame detector would fire on. When a flag holds, a synchronized API pipeline — Gemini for a description, ElevenLabs for voice, Twilio for the call, glued together through ngrok — places an automated, descriptive emergency phone call.",
       result:
-        "Suppressed single-frame false positives while still catching sustained suspicious behavior in real time, then escalated automatically with a human-sounding call.",
-    },
-  },
-  {
-    name: "Chat Messenger",
-    domain: "Networking & concurrency",
-    blurb:
-      "A multi-user chat application built on raw GUI and network-programming fundamentals.",
-    stack: ["Java", "Sockets", "Multithreading", "GUI"],
-    caseStudy: {
-      problem:
-        "A chat server has to accept new connections and broadcast messages at the same time — block on one and the whole thing stalls.",
-      approach:
-        "Built a client/server app from networking and GUI primitives, then used multithreading so the server listens for new connections on one thread while broadcasting messages to every client on others.",
-      result:
-        "Multiple clients hold a live conversation in real time, with the server handling joins and message fan-out concurrently.",
+        "Suppressed single-frame false alarms while still catching sustained theft in real time, then escalated automatically with a human-sounding call describing what it saw.",
     },
   },
 ]
@@ -160,24 +170,36 @@ export const skills = {
   groups: [
     {
       label: "Languages",
-      primary: ["Python", "Java", "C"],
-      familiar: ["C++", "SQL", "JavaScript", "TypeScript", "HTML", "CSS", "MATLAB", "Rust", "OCaml", "Assembly"],
+      primary: ["Python", "Java", "TypeScript"],
+      familiar: ["JavaScript", "SQL", "C++", "C", "HTML", "CSS", "Rust", "Assembly", "OCaml", "MATLAB"],
     },
   ],
   web: ["React", "Node.js", "Tailwind CSS", "Flask"],
   tools: [
-    "Git",
-    "GitHub",
-    "Linux",
-    "VS Code",
-    "Firebase",
-    "Jira",
-    "Figma",
-    "Power Automate",
-    "Copilot Studio",
-    "Twilio",
-    "ngrok",
-    "Claude",
+    "Git", 
+    "GitHub", 
+    "GitLab",
+    "Linux", 
+    "VSCode", 
+    "Claude Code", 
+    "Jira", 
+    "Neon", 
+    "Drizzle", 
+    "Firebase", 
+    "Vercel", 
+    "Fly", 
+    "BigQuery", 
+    "Inngest", 
+    "Ngrok", 
+    "Twilio", 
+    "Zapier", 
+    "Figma", 
+    "Power Automate", 
+    "Eclipse", 
+    "Copilot Studio", 
+    "ElevenLabs", 
+    "AgentEmail", 
+    "Linq"
   ],
 }
 
@@ -214,8 +236,8 @@ export const leadership: LeadershipRole[] = [
     role: "Eagle Scout & Troop President",
     period: "May 2015 — Aug 2025",
     points: [
-      "Led 70+ Scouts, ran monthly campouts (200+ attendees), and organized week-long summer camps (1,000+ attendees).",
-      "Mentored a 30+ person leadership team, ran annual food drives collecting 60,000+ lbs, and recruited for Scouting’s national honor society.",
+      "Led 70+ Scouts, administered monthly campouts (200+ attendees), and organized week-long summer camps (1,000+ attendees)",
+      "Mentored 30+ Scout leadership team, organized annual food drives (60,000+ lbs), and recruited in Scouting’s national honor society"
     ],
   },
   {
@@ -223,8 +245,8 @@ export const leadership: LeadershipRole[] = [
     role: "Instructor & Treasurer",
     period: "Sep 2022 — May 2025",
     points: [
-      "Taught 60+ 4th–5th graders through 30+ science experiments and mentored 100+ club members as teachers.",
-      "Managed weekly finances, built and presented curricula, and coordinated logistics and transportation.",
+      "Instructed 60+ 4th-5th graders through 30+ science experiments, mentored 100+ club members as teachers, and organized curricula",
+      "Managed weekly finances and payments, created and presented lessons, and coordinated time logistics and transportation"
     ],
   },
 ]

@@ -24,8 +24,7 @@ export default function Experience() {
                 <h3 className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xl font-semibold tracking-tight text-ink">
                   {job.company}
                   {job.current ? (
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-wash px-2.5 py-0.5 font-mono text-[0.65rem] uppercase tracking-[0.12em] text-accent">
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                    <span className="inline-flex items-center rounded-full bg-accent-wash px-2.5 py-0.5 font-mono text-[0.65rem] uppercase tracking-[0.12em] text-accent">
                       Current
                     </span>
                   ) : null}
