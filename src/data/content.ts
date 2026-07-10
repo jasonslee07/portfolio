@@ -211,15 +211,15 @@ export const education = {
   grad: "Expected May 2028",
   gpa: "3.97 / 4.00",
   coursework: [
-    "Object-Oriented Programming I & II (Java)",
-    "Advanced Data Structures",
-    "Design and Analysis of Computer Algorithms",
     "Algorithms",
+    "Advanced Data Structures",
     "Computer Systems (C & Assembly)",
+    "Cloud Computing with AWS",
+    "Object-Oriented Programming I & II (Java)",
     "Organization of Programming Languages (OCaml & Rust)",
     "Discrete Structures",
     "Linear Algebra",
-    "Multivariable Calculus",
+    "Multivariable Calculus"
   ],
 }
 
