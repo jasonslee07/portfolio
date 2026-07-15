@@ -19,7 +19,7 @@ export const profile = {
 }
 
 export const hero = {
-  eyebrow: "CS + Math @ UMD · SWE @ American Operator",
+  eyebrow: "CS + Math @ UMD",
   headline: "Hi, my name is Jason!",
   subhead: 
   "I'm a computer science student at the University of Maryland, and I like using my passion for coding to make the world a better place :D",
@@ -38,16 +38,15 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "American Operator",
-    role: "AI Engineer Intern",
+    role: "Software Engineer Intern",
     location: "Austin, TX",
     period: "Jun 2026 — Present",
     current: true,
-    stack: ["Claude Code", "Python", "TypeScript", "SQL", "React", "Neon Postgres", "Vercel", "BigQuery", "Inngest", "Drizzle ORM", "Zod"],
+    stack: ["React", "Neon Postgres", "Vercel", "BigQuery", "Inngest"],
     points: [
-      "Deployed a full-stack TypeScript KPI dashboard (React, serverless API, Postgres) replacing a manual weekly spreadsheet for portfolio ops",
+      "Deployed a full-stack TypeScript KPI dashboard (React, Postgres) with role-based access control and dynamic, per-company KPIs",
       "Shipped Inngest pipelines syncing BigQuery metrics to a live dashboard and weekly KPI emails to leadership, replacing manual reporting",
-      "Automated accounts payable end-to-end with an AI pipeline that reads invoice PDFs, matches costs to jobs, and files Knowify bills daily",
-      "Built a modular LLM agent integrating 5+ APIs (HubSpot, calendar, web, call transcripts) to auto-generate research briefs and tear sheets"
+      "Automated accounts payable with an AI pipeline that reads invoice PDFs, matches costs to jobs, and files 70+ Knowify bills every month"
     ],
   },
   {
@@ -55,7 +54,7 @@ export const experience: Experience[] = [
     role: "Software Engineer Intern",
     location: "McLean, VA",
     period: "Jan 2026",
-    stack: ["Copilot Studio", "Power Automate", "OAuth 2.0 (3LO)", "Jira API", "Azure Blob"],
+    stack: ["OAuth 2.0 (3LO)", "Azure Blob", "Copilot Studio", "Power Automate", "Jira Service Management"],
     points: [
       "Designed and built an IT service desk agent in Copilot Studio, trained on SharePoint libraries, to resolve common employee IT questions",
       "Created Power Automate flows and OAuth 2.0 (3LO) custom connectors to implement automated ticket creation to Jira’s API",
@@ -69,10 +68,10 @@ export const experience: Experience[] = [
     location: "College Park, MD",
     period: "Aug 2025 — Present",
     current: true,
-    stack: ["Python", "Wasserstein GABs", "FRQI Encoding"],
+    stack: ["Python", "Google Colab", "Wasserstein QGAN", "FRQI Encoding", "MNIST"],
     points: [
-      "Researched quantum Wasserstein GANs for high-resolution image generation, evaluating FRQI states and task-specific inductive biases",
-      "Applied the ImageQGANS codebase to replicate published results, cross-referencing state vector simulations with generated figures"
+      "Researched quantum Wasserstein GANs for high-resolution image generation, evaluating FRQI image encoding across MNIST data",
+      "Diagnosed a CPU-bound bottleneck in the quantum GAN pipeline (JAX) and cut image-generation time from 30 to 2 hours via GPU"
     ],
   },
   {
@@ -80,7 +79,7 @@ export const experience: Experience[] = [
     role: "Computer Science Instructor",
     location: "Gaithersburg, MD",
     period: "May 2024 — Aug 2024",
-    stack: ["Python", "JavaScript", "HTML", "CSS", "Robotics"],
+    stack: ["Teaching", "Python", "JavaScript", "HTML", "CSS"],
     points: [
       "Mentored 50+ K-8 students in Scratch, Python, JavaScript, HTML, CSS, and robotics through hands-on programming projects",
       "Presented lessons on data structures, control flow, event-driven processing, serial and parallel execution, and animation"
@@ -95,6 +94,14 @@ export const experience: Experience[] = [
   //   stack: [],
   //   points: [],
   // },
+  {
+    company: "Google",
+    role: "Student Ambassador",
+    location: "College Park, MD",
+    period: "Starting Aug 2026",
+    stack: [],
+    points: [],
+  },
   {
     company: "UMD Department of Computer Science",
     role: "Course Facilitator for \"The Coding Interview\"",
@@ -120,11 +127,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "Redress",
+    name: "Redress | 2nd Place Winner, Patriot Games 250 Hackathon",
     domain: "Agentic civic tech",
     blurb:
       "A full-stack app where an AI agent helps citizens file complaints and pushes government agencies to actually respond.",
-    stack: ["React", "TypeScript", "AgentMail", "Linq"],
+    stack: ["TypeScript", "React", "Agent Architecture", "AgentMail", "Linq"],
     caseStudy: {
       problem:
         "Filing a complaint with the right government office is confusing, and even when it lands, agencies stall and cases quietly die with no follow-up.",
@@ -139,7 +146,7 @@ export const projects: Project[] = [
     domain: "Real-time marketplace",
     blurb:
       "A dorm marketplace with separate client and vendor experiences, real-time inventory, and live search.",
-    stack: ["React", "TypeScript", "Tailwind CSS", "Firebase Auth", "Firestore", "Firebase Storage"],
+    stack: ["TypeScript", "React", "Tailwind CSS", "Firebase Auth", "Firestore"],
     caseStudy: {
       problem:
         "Students buying and selling within a dorm had no shared place to list inventory, and needed sellers and buyers to see the same stock update the moment it changed.",
@@ -154,7 +161,7 @@ export const projects: Project[] = [
     domain: "Computer vision",
     blurb:
       "A real-time shoplifting-detection app that watches video, flags suspicious behavior, and places an emergency call.",
-    stack: ["React", "TypeScript", "Flask", "Roboflow", "Gemini", "ElevenLabs", "Twilio", "ngrok"],
+    stack: ["TypeScript", "React", "Flask", "Twilio", "Gemini"],
     caseStudy: {
       problem:
         "Open-air spots like farmers markets run on trust — stalls are unattended, crowds are dense, and a vendor busy with one customer can't watch someone pocket goods at the next table over.",
@@ -174,7 +181,7 @@ export const skills = {
       familiar: ["JavaScript", "SQL", "C++", "C", "HTML", "CSS", "Rust", "Assembly", "OCaml", "MATLAB"],
     },
   ],
-  web: ["React", "Node.js", "Tailwind CSS", "Flask"],
+  web: ["React", "Node.js", "Flask", "Tailwind CSS", "Zod", "Drizzle"],
   tools: [
     "Git", 
     "GitHub", 
@@ -184,10 +191,8 @@ export const skills = {
     "Claude Code", 
     "Jira", 
     "Neon", 
-    "Drizzle", 
     "Firebase", 
     "Vercel", 
-    "Fly", 
     "BigQuery", 
     "Inngest", 
     "Ngrok", 
