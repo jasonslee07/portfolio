@@ -44,9 +44,10 @@ export const experience: Experience[] = [
     current: true,
     stack: ["React", "Neon Postgres", "Vercel", "BigQuery", "Inngest"],
     points: [
-      "Deployed a full-stack TypeScript KPI dashboard (React, Postgres) with role-based access control and dynamic, per-company KPIs",
-      "Shipped Inngest pipelines syncing BigQuery metrics to a live dashboard and weekly KPI emails to leadership, replacing manual reporting",
-      "Automated accounts payable with an AI pipeline that reads invoice PDFs, matches costs to jobs, and files 70+ Knowify bills every month"
+      "Deployed a full-stack TypeScript KPI dashboard (React, PostgreSQL) with role-based access control and dynamic, per-company KPIs",
+      "Shipped dlt and dbt pipelines pulling 3 CRMs and 10 financial accounts into BigQuery, with Inngest crons syncing data marts to Neon",
+      "Generated $25,000+ in annual EBITDA and freed 200+ hrs/yr of manual reporting by automating weekly KPI emails across the portfolio",
+      "Automated accounts payable with an AI pipeline on DeepInfra that reads invoice PDFs, matches costs to jobs, and files 70+ bills a month"
     ],
   },
   {
@@ -63,15 +64,39 @@ export const experience: Experience[] = [
     ],
   },
   {
-    company: "First-Year Innovation & Research Experience",
+    company: "UMD Department of CS",
+    role: "Teaching Assistant: CMSC389O (The Coding Interview)",
+    location: "College Park, MD",
+    period: "Aug 2026 — Present",
+    current: true,
+    stack: ["Data Structures", "Algorithms", "System Design", "Teaching"],
+    points: [
+      "Teaching data structures, algorithms, system design, and time and space complexity to 100+ university students for technical interviews",
+      "Creating 8 Python assignments and test suites, grading 100+ submissions, conducting 20+ mock interviews, workshopping 20+ resumes"
+    ],
+  },
+  {
+    company: "University of Maryland",
     role: "Quantum ML Undergraduate Researcher",
     location: "College Park, MD",
     period: "Aug 2025 — Present",
     current: true,
     stack: ["Python", "Google Colab", "Wasserstein QGAN", "FRQI Encoding", "MNIST"],
     points: [
-      "Researched quantum Wasserstein GANs for high-resolution image generation, evaluating FRQI image encoding across MNIST data",
+      "Researching quantum Wasserstein GANs for high-resolution image generation, evaluating FRQI image encoding across MNIST data",
       "Diagnosed a CPU-bound bottleneck in the quantum GAN pipeline (JAX) and cut image-generation time from 30 to 2 hours via GPU"
+    ],
+  },
+  {
+    company: "Google",
+    role: "Student Ambassador",
+    location: "Remote",
+    period: "Aug 2026 — Present",
+    current: true,
+    stack: ["Gemini", "Google Colab", "NotebookLM"],
+    points: [
+      "Evangelizing Google AI tools (Gemini, NotebookLM) to a 40,000+ student network via campus workshops, events, and media",
+      "Consulting for Google product teams by crowdsourcing peer prompts and use cases to improve Gemini feature development"
     ],
   },
   {
@@ -81,7 +106,7 @@ export const experience: Experience[] = [
     period: "May 2024 — Aug 2024",
     stack: ["Teaching", "Python", "JavaScript", "HTML", "CSS"],
     points: [
-      "Mentored 50+ K-8 students in Scratch, Python, JavaScript, HTML, CSS, and robotics through hands-on programming projects",
+      "Mentored 50+ students in Scratch, Python, JavaScript, HTML, CSS, and robotics through hands-on programming projects",
       "Presented lessons on data structures, control flow, event-driven processing, serial and parallel execution, and animation"
 
     ],
@@ -94,22 +119,22 @@ export const experience: Experience[] = [
   //   stack: [],
   //   points: [],
   // },
-  {
-    company: "Google",
-    role: "Student Ambassador",
-    location: "College Park, MD",
-    period: "Starting Aug 2026",
-    stack: [],
-    points: [],
-  },
-  {
-    company: "UMD Department of Computer Science",
-    role: "Course Facilitator for \"The Coding Interview\"",
-    location: "College Park, MD",
-    period: "Starting Aug 2026",
-    stack: [],
-    points: [],
-  },
+  // {
+  //   company: "Google",
+  //   role: "Student Ambassador",
+  //   location: "College Park, MD",
+  //   period: "Starting Aug 2026",
+  //   stack: [],
+  //   points: [],
+  // },
+  // {
+  //   company: "UMD Department of Computer Science",
+  //   role: "Course Facilitator for \"The Coding Interview\"",
+  //   location: "College Park, MD",
+  //   period: "Starting Aug 2026",
+  //   stack: [],
+  //   points: [],
+  // },
 ]
 
 export type Project = {
@@ -136,9 +161,9 @@ export const projects: Project[] = [
       problem:
         "Filing a complaint with the right government office is confusing, and even when it lands, agencies stall and cases quietly die with no follow-up.",
       approach:
-        "Built a full-stack React + TypeScript app around an AI agent that routes each case to the appropriate city office and emails the agency through AgentMail, escalating automatically when one stalls. A human approval step gates every outbound message before it sends, and Linq pushes real-time text updates to citizens on every case.",
+        "I built Redress, a full-stack React and TypeScript app where an AI agent helps citizens file complaints and pushes government agencies to respond. Redress is designed to automatically route cases to the right agency, email via AgentMail, auto-escalate stalled replies, and text citizens via Linq.",
       result:
-        "Citizens file once and the agent handles routing, outreach, and escalation on their behalf — with a person approving anything that goes out and text updates keeping them in the loop the whole way.",
+        "Redress cuts constituents' per-case time ~90% and agency-reply turnaround from days to same-day, across 10 federal agencies.",
     },
   },
   {
@@ -151,9 +176,9 @@ export const projects: Project[] = [
       problem:
         "Students buying and selling within a dorm had no shared place to list inventory, and needed sellers and buyers to see the same stock update the moment it changed.",
       approach:
-        "Built a React + TypeScript app with distinct Client and Vendor roles, each with its own dashboard. Firestore drives real-time data sync, Firebase Auth handles accounts, and Firebase Storage manages secure image uploads. Added an active cart and live search filtering on top.",
+        "I built Sell4Impact, a full-stack React and TypeScript dorm marketplace for college students to buy/sell secondhand dorm decor sustainably and affordably. I integrated Firebase Auth, real-time Firestore sync, role-based dashboards, dynamic inventory, search, cart, and Cloud Storage uploads.",
       result:
-        "Vendors manage dynamic inventory, track orders, and edit profiles while buyers browse a catalog that updates instantly — no refresh, no stale listings.",
+        "Sell4Impact offsets colleges' $192/student annual furnishing spend and 640 lb/student national furniture waste footprint, via resale.",
     },
   },
   {
@@ -166,9 +191,9 @@ export const projects: Project[] = [
       problem:
         "Open-air spots like farmers markets run on trust — stalls are unattended, crowds are dense, and a vendor busy with one customer can't watch someone pocket goods at the next table over.",
       approach:
-        "Built a real-time detection app with React (TypeScript), Flask, and a Roboflow vision model to analyze the video feed and flag suspicious behavior. A sliding-window heuristic over consecutive frames holds a flag only when behavior persists, cutting the false positives a naïve frame-by-frame detector would fire on. When a flag holds, a synchronized API pipeline — Gemini for a description, ElevenLabs for voice, Twilio for the call, glued together through ngrok — places an automated, descriptive emergency phone call.",
+        "I built Gotcha!, a Real-time shoplifting detection app using React (TypeScript), Flask, and Roboflow to analyze video and flag suspicious behavior. I engineered a synchronized API pipeline (Gemini, ElevenLabs, Twilio) via ngrok to trigger automated, descriptive emergency phone calls.",
       result:
-        "Suppressed single-frame false alarms while still catching sustained theft in real time, then escalated automatically with a human-sounding call describing what it saw.",
+        "Gotcha! saves companies ~$2.5K per $1M revenue/yr, reduces theft by 30-50%, and protects shopkeepers from shoplifter violence.",
     },
   },
 ]
@@ -213,16 +238,16 @@ export const education = {
   location: "College Park, MD",
   degree: "B.S. Computer Science",
   minor: "Minor in Mathematics",
-  grad: "Expected May 2028",
+  grad: "May 2028",
   gpa: "3.97 / 4.00",
   coursework: [
     "Algorithms",
     "Advanced Data Structures",
     "Computer Systems (C & Assembly)",
-    "Cloud Computing with AWS",
     "Object-Oriented Programming I & II (Java)",
     "Organization of Programming Languages (OCaml & Rust)",
     "Discrete Structures",
+    "MATLAB Programming",
     "Linear Algebra",
     "Multivariable Calculus"
   ],
