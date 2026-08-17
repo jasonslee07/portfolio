@@ -40,8 +40,8 @@ export const experience: Experience[] = [
     company: "American Operator",
     role: "Software Engineer Intern",
     location: "Austin, TX",
-    period: "Jun 2026 — Present",
-    current: true,
+    period: "Jun 2026 — Jul 2026",
+    current: false,
     stack: ["React", "Neon Postgres", "Vercel", "BigQuery", "Inngest"],
     points: [
       "Deployed a full-stack TypeScript KPI dashboard (React, PostgreSQL) with role-based access control and dynamic, per-company KPIs",
@@ -55,6 +55,7 @@ export const experience: Experience[] = [
     role: "Software Engineer Intern",
     location: "McLean, VA",
     period: "Jan 2026",
+    current: false,
     stack: ["OAuth 2.0 (3LO)", "Azure Blob", "Copilot Studio", "Power Automate", "Jira Service Management"],
     points: [
       "Designed and built an IT service desk agent in Copilot Studio, trained on SharePoint libraries, to resolve common employee IT questions",
@@ -103,6 +104,7 @@ export const experience: Experience[] = [
     company: "Panda Programmer",
     role: "Computer Science Instructor",
     location: "Gaithersburg, MD",
+    current: false,
     period: "May 2024 — Aug 2024",
     stack: ["Teaching", "Python", "JavaScript", "HTML", "CSS"],
     points: [
